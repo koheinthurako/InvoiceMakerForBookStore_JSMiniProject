@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Maker for Book Store</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container animate__animated animate__bounceIn">
+        <div class="col-12 text-center my-5">
+            <h1 class="fw-bold">Invoice <span class="text-primary">Maker</span></h1>
+        </div>
+        <form id="inputForm" class="d-print-none">
+            <div class="row gap-lg-0 gap-3">
+                <div class="col-12 col-lg-4">
+                    <label for="items" class="form-label">Choose Books</label>
+                    <select name="items" id="items" class="form-select" required></select>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" name="quantity" class="form-control" id="quantity" required>
+                </div>
+                <div class="col-12 col-lg-4 mt-lg-0 mt-3">
+                    <button class="btn btn-lg btn-primary w-100 h-100 fw-semibold addBtn">Add to list</button>
+                </div>
+            </div>
+        </form>
+        <table class="table my-5">
+            <thea my-5d>
+                <t my-5r>
+                    <th>Books</th>
+                    <th class="text-end pe-0">Price</th>
+                    <th class="text-end pe-0">Quantity</th>
+                    <th class="text-end pe-0">Cost</th>
+                </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3" class="text-center">Total Cost</th>
+                    <th id="total" class="text-end"></th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="d-flex">
+            <button class="btn btn-primary ms-auto d-print-none printBtn" onclick="print()">
+                <i class="bi bi-printer-fill me-1"></i>
+                Print
+            </button>
+        </div>
+    </div>
+
+    <script src="../js-invoice-maker/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script>
+
+
+
+    </script>
+    
+</body>
+</html>

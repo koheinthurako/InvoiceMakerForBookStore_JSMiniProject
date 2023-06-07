@@ -33,9 +33,9 @@ inputForm.addEventListener('submit', function(e) {
                     ${currentItem.name}
                     <span class="text-danger small delBtn" onclick="delItem(event)">Delete</span>
                 </td>
-                <td class="text-end pe-0">${currentItem.price}</td>
-                <td class="text-end pe-0">${quantity.value}</td>
-                <td class="text-end pe-0 cost">${cost}</td>
+                <td class="text-end">${currentItem.price}</td>
+                <td class="text-end">${quantity.value}</td>
+                <td class="text-end cost">${cost}</td>
                 `;cost
     rows.append(tr);
     calTotalCost();

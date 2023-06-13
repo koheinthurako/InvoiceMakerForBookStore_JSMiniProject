@@ -11,10 +11,24 @@ function calTotalCost() {
 }
 
 function delItem(event) {
-    if(confirm("Are you sure to delete this book?")) {
-        event.target.parentElement.parentElement.remove();
-        calTotalCost();
-    }
+    // if(confirm("Are you sure to delete this book?")) {
+    //     event.target.parentElement.parentElement.remove();
+    //     calTotalCost();
+    // }
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            event.target.parentElement.parentElement.remove();
+            calTotalCost();
+        }
+      })
 }
 
 products.forEach(function(product) {
